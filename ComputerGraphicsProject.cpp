@@ -127,7 +127,6 @@ int main()
     line(120,50,180,150);
     line(150,50,150,200);
 
-
     line(300,100,400,100);
     line(320,50,380,150);
     line(350,50,350,200);
@@ -326,8 +325,11 @@ int main()
         setcolor(DARKGRAY);
         line(0, 370, maxX, 370);
         //Sun
-        setcolor(YELLOW);
-        circle(80+i,80,50);
+        setcolor(WHITE);
+        circle(0+i,50,50);
+        setfillstyle(SOLID_FILL,YELLOW);//Color
+        floodfill(0+i,30,WHITE);//Area
+
         //VCR Games Board
         setcolor(WHITE);
         rectangle(525,250,535,370);
@@ -335,14 +337,29 @@ int main()
         outtextxy(490,220,"Dhaka Road");
         //Bus
         setcolor(BLUE);
-        rectangle(100+i,300,200+i,350);
+        rectangle(90+i,300,200+i,350);
         setcolor(GREEN);
         circle(120+i,360,10);
         circle(180+i,360,10);
-        delay(20);
+
+        //Tree
+        line(100,100,200,100);
+        line(120,50,180,150);
+        line(150,50,150,200);
+
+        line(300,100,400,100);
+        line(320,50,380,150);
+        line(350,50,350,200);
+
+        line(500,100,600,100);
+        line(520,50,580,150);
+        line(550,50,550,200);
+
+
+
+        delay(10);
         cleardevice();
     }
-    getch();
     closegraph();
 
 }
